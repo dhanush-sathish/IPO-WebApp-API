@@ -1,0 +1,75 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dce6f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Section Styling */
+  section {
+    margin: 0px;
+  }
+  
+  /* Main Container */
+  .container {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Investors Grid */
+  .investors {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  /* Investor Header (Search Bar + Title) */
+  .investor-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+  
+  .sharks {
+    font-size: 34px;
+    font-weight: bold;
+  }
+  
+  /* Search Bar */
+  .search-container {
+    margin-left:auto;
+    position: relative;
+    width: 250px;
+  }
+  
+  .search-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .investor-header {
+      flex-direction: column-reverse;
+      align-items:center;
+      text-align: center;
+    }
+  
+    .sharks {
+      margin-bottom:5px;
+    }
+  
+    .search-container {
+      margin: 0 auto; /* Centers horizontally */
+      display: block;
+      text-align: center;
+    }
+  }
