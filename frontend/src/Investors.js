@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import InvestorCard from "./components/InvestorCard/InvestorCard";
 import Navbar from "./components/Navbar/Navbar";
-import "./App.css";
+
 const investors = [
     {
       name: "Rakesh Jhunjhunwala",

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import InvestorApp from "./Investors";
-import "./App.css";
 import "./Investors.css";
 
 class App extends Component {

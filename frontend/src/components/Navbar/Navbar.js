@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logowithoutname.png";
-
+import { useNavigate } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="navbar">
@@ -28,8 +29,8 @@ const Navbar = () => {
           <li><a href="#">BROKERS</a></li>
           <li><a href="#">LIVE NEWS <span className="new-badge">NEW</span></a></li>
           <li className="auth-buttons">
-            <button className="sign-in">Sign In</button>
-            <button className="sign-up">Sign Up Now</button>
+            <button className="sign-in" onClick = {() => navigate('/signin')} >Sign In</button>
+            <button className="sign-up" onClick = {() => navigate('/signup')} >Sign Up Now</button>
           </li>
         </ul>
       </div>
