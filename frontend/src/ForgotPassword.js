@@ -1,12 +1,22 @@
 import React, { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import "./ForgotPassword.css";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Password reset link sent to: ${email}`);
+    if (recaptchaToken) {
+      alert(`Password reset link sent to: ${email}`);
+    } else {
+      alert("Please complete the reCAPTCHA");
+    }
+  };
+
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
   };
 
   return (
@@ -24,6 +34,10 @@ const ForgotPassword = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+          />
+          <ReCAPTCHA
+            sitekey="YOUR_RECAPTCHA_SITE_KEY"
+            onChange={handleRecaptchaChange}
           />
           <button type="submit">Password Reset</button>
         </form>
