@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueStock Broker Comparison</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 90%;
+            margin: 40px auto;
+            padding: 30px;
+            background: linear-gradient(145deg, #ffffff, #f3f3f3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-radius: 25px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #1a2a6c;
+            text-shadow: 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 18px;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        th {
+            background: linear-gradient(135deg, #1a2a6c, #4e54c8);
+            color: white;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(26, 42, 108, 0.1);
+        }
+
+        tr:hover {
+            background: rgba(26, 42, 108, 0.2);
+            transition: background 0.4s ease;
+        }
+
+        td {
+            background: rgba(255, 223, 186, 0.2);
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #b21f1f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BlueStock Broker Comparison</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>BlueStock</th>
+                    <th>Broker Y</th>
+                    <th>Broker Z</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic Details</td>
+                    <td>Founded 2015, 300K clients, Nationwide</td>
+                    <td>Established 2010, 250K clients, Urban Areas</td>
+                    <td>New in 2020, 80K clients, Online-Only</td>
+                </tr>
+                <tr>
+                    <td>Account Opening Charges</td>
+                    <td>$5 + $8 AMC</td>
+                    <td>$10 + $12 AMC</td>
+                    <td>$0 + $15 AMC</td>
+                </tr>
+                <tr>
+                    <td>Trading Platforms</td>
+                    <td>Mobile, Web, Desktop</td>
+                    <td>Web & Mobile</td>
+                    <td>Mobile Only</td>
+                </tr>
+                <tr>
+                    <td>Charts and Data</td>
+                    <td>Advanced Live Charts, Historical Data</td>
+                    <td>Basic Charts, Limited Data</td>
+                    <td>Live Charts, No Historical Data</td>
+                </tr>
+                <tr>
+                    <td>Pricing</td>
+                    <td>0.02% per trade</td>
+                    <td>Flat $2 per trade</td>
+                    <td>0.05% per trade</td>
+                </tr>
+                <tr>
+                    <td>Leverage</td>
+                    <td>8x Equity, 5x Commodity</td>
+                    <td>6x Equity, 4x Commodity</td>
+                    <td>3x Equity, 2x Commodity</td>
+                </tr>
+                <tr>
+                    <td>Orders</td>
+                    <td>Advanced Orders, GTT, Bracket</td>
+                    <td>Market, Limit, Stop-Loss</td>
+                    <td>Market, Limit</td>
+                </tr>
+                <tr>
+                    <td>Research & Advice</td>
+                    <td>Personalized Research, Daily Insights</td>
+                    <td>Standard Reports, Weekly Advice</td>
+                    <td>No Advisory</td>
+                </tr>
+                <tr>
+                    <td>Education Initiatives</td>
+                    <td>Workshops, Online Courses</td>
+                    <td>Blog Content Only</td>
+                    <td>Limited Tutorials</td>
+                </tr>
+                <tr>
+                    <td>Unique Features & Offers</td>
+                    <td>Free AMC for 1st Year</td>
+                    <td>Zero Brokerage for 2 Months</td>
+                    <td>Referral Bonus $25</td>
+                </tr>
+                <tr>
+                    <td>Referral Program</td>
+                    <td>$60 per Referral</td>
+                    <td>$40 per Referral</td>
+                    <td>$30 per Referral</td>
+                </tr>
+                <tr>
+                    <td>Franchisee Info</td>
+                    <td>Available - Starting $1200</td>
+                    <td>Limited Availability</td>
+                    <td>Not Available</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
