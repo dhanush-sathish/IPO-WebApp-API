@@ -1,18 +1,13 @@
-import React, { Component } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import InvestorApp from "./Investors";
-import "./Investors.css";
+import React from "react";
+import ManageIPO from "./ManageIPO";
+import "./ManageIPO.css";
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <Navbar />
-                <h1>app page</h1>
-                <InvestorApp />
-            </div>
-        );
-    }
+function App() {
+  return (
+    <div className="App">
+      <ManageIPO />
+    </div>
+  );
 }
 
 export default App;
