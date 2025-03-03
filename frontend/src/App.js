@@ -1,11 +1,10 @@
 import React from "react";
-import ManageIPO from "./ManageIPO";
-import "./ManageIPO.css";
+import LoginPage from "./LoginPage";
 
 function App() {
   return (
     <div className="App">
-      <ManageIPO />
+        <LoginPage />
     </div>
   );
 }
