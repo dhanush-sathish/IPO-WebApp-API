@@ -1,17 +1,8 @@
-//---------To-Do---------
-// 1.Change the font to a desired custom font.
-// 2. Send requests to the backend with email and password on form submission.
-// 3. Ensure proper alignment of form fields, buttons, and images.
-// 4. Make "Continue with Google" a button, styled with a Google logo.
-// 5. Handle the form with validation and prevent default form submission.
-// 6. Implement the showPassword function to toggle password visibility.
-
-
 import { Component, createRef } from "react";
 import logo from './assets/logo.jpg';  // Ensure this image exists in your project
 import Recaptcha from 'react-google-recaptcha';
 import googlelogo from './assets/google-logo.jpg';
-import SignUp from './SignUp';
+import {FaEye} from 'react-icons/fa';
 
 class LoginPage extends Component {
     constructor(props) {
@@ -63,20 +54,20 @@ class LoginPage extends Component {
                         <div className="mb-3">
                             <label className="fw-bold form-label">Email</label>
                             <div className="input-group input-group-lg border border-dark" style={{ borderRadius: "5px" }}>
-                                <input type="email" id="email" className="form-control border-0" required />
+                                <input type="email" id="email" className="form-control m-0 border-0" required />
                             </div>
                         </div>
 
                         <div className="mb-3">
                             <label className="fw-bold form-label">Password</label>
                             <div className="input-group input-group-lg border border-dark" style={{ borderRadius: "5px" }}>
-                                <input type="password" id="password" className="form-control border-0" required />
+                                <input type="password" id="password" className="form-control m-0 border-0" required />
                                 <button 
-                                    className="m-1"
+                                    className="h-100"
                                     style={{ width: "48px", height: "38px", backgroundColor: "white", border: "None" }}
                                     onClick={this.showPassword}
                                 >
-                                    <i className="bi bi-eye"></i>
+                                    <FaEye className="view-icon" title="View" style={{ color: "grey"}} />
                                 </button>
                             </div>
                         </div>
@@ -113,7 +104,7 @@ class LoginPage extends Component {
                     </div>
 
                     <div className="py-3">
-                        Don't have an account? <span className="text-success"><a className="text-decoration-none" href="">Sign up here</a></span>
+                        Don't have an account? <span className="text-success"><a className="text-decoration-none" href="/signup">Sign up here</a></span>
                     </div>
                 </div>
             </div>

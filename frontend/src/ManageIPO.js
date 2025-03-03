@@ -32,7 +32,7 @@ const ManageIPO = () => {
       <div className="main-content">
         <Topbar />
         <section className="dashboard">
-          <h2 class="title">Upcoming IPO | Dashboard</h2>
+          <h2 className="title">Upcoming IPO | Dashboard</h2>
           <table className="striped-table">
             <thead>
               <tr>

@@ -36,13 +36,13 @@ const Menu = () => {
         </div>
         <hr />
         <ul className="menu-list">
-          <li>MENU</li>
+          <h6>MENU</h6>
           <li><FaChartBar className="menu-icon" /> <span>Dashboard</span></li>
           <li><FaShoppingCart className="menu-icon" /> <span>Manage IPO</span></li>
           <li><FaAlignLeft className="menu-icon" /> <span>IPO Subscription</span></li>
           <li><FaCommentDots className="menu-icon" /> <span>IPO Allotment</span></li>
           <br></br>
-          <li>OTHERS</li>
+          <h6>OTHERS</h6>
           <li><FaCog className="menu-icon" /> <span>Settings</span></li>
           <li><FaDatabase className="menu-icon" /> <span>API Manager</span></li>
           <li><FaUser className="menu-icon" /> <span>Accounts</span></li>
