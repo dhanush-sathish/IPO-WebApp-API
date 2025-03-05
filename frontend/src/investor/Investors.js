@@ -1,62 +1,62 @@
 import React, { useState, useRef, useEffect } from "react";
-import InvestorCard from "./components/InvestorCard/InvestorCard";
-import Navbar from "./components/Navbar/Navbar";
+import InvestorCard from "../components/InvestorCard";
+import Navbar from "../components/Navbar";
 
 const investors = [
     {
       name: "Rakesh Jhunjhunwala",
       description: "He started investing in the 90s... His inversement st...",
-      image: require("./assets/Rakesh Jhunjhunwala.png"),
+      image: require("../assets/Rakesh Jhunjhunwala.png"),
     },
     {
       name: "Anil Goel",
       description: "He started investing in the 90s... His inversement st...",
-      image: require("./assets/Anil Goel.png"),
+      image: require("../assets/Anil Goel.png"),
     },
     {
       name: "Ashish Dhawan",
       description: "He started investing in the 90s... His inversement st...",
-      image: require("./assets/Ashish Dhawan.png"),
+      image: require("../assets/Ashish Dhawan.png"),
     },
     {
       name: "Ashish Kacholia",
       description: "He started investing in the 90s... His inversement st...",
-      image: require("./assets/Ashish Kacholia.png"),
+      image: require("../assets/Ashish Kacholia.png"),
     },
     {
       name: "Dolly Rajeev Khanna",
       description: "He started investing in the 90s... His inversement st...",
-      image: require("./assets/Dolly Rajeev Khanna.png"),
+      image: require("../assets/Dolly Rajeev Khanna.png"),
     },
     {
       name: "Hemendra Kothari",
       description: "He started investing in the 90s... His inversement st...",
-      image: require("./assets/Hemendra Kothari.png"),
+      image: require("../assets/Hemendra Kothari.png"),
     },
     {
       name: "Nemish Shah",
       description: "He started investing in the 90s... His inversement st...",
-      image: require("./assets/Nemish Shah.png"),
+      image: require("../assets/Nemish Shah.png"),
     },
     {
       name: "Porinju Veliyath",
       description: "He started investing in the 90s... His inversement st...",
-      image: require("./assets/Porinju Veliyath.png"),
+      image: require("../assets/Porinju Veliyath.png"),
     },
     {
       name: "Radhakishan Damani",
       description: "He started investing in the 90s His inversement st...",
-      image: require("./assets/Radhakishan Damani.png"),
+      image: require("../assets/Radhakishan Damani.png"),
     },
     {
       name: "Sunil Singhania",
       description: "He started investing in the 90s... His inversement st...",
-      image: require("./assets/Sunil Singhania.png"),
+      image: require("../assets/Sunil Singhania.png"),
     },
     {
       name: "Vijay Kedia",
       description: "He started investing in the 90s... His inversement st...",
-      image: require("./assets/Vijay Kedia.png"),
+      image: require("../assets/Vijay Kedia.png"),
     },
   ];
   
@@ -84,11 +84,12 @@ function InvestorApp() {
       <br />
       <br />
       <div className="container">
-        <section>
+        <section className="investor-section">
           <div className="investor-header">
             <span className="sharks">Shark Investors</span>
             <div className="search-container" ref={searchRef}>
               <input
+                className="search-input"
                 type="text"
                 placeholder="Search by investor name..."
                 value={search}

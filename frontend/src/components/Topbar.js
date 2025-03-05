@@ -1,5 +1,5 @@
 import React from "react";
-import "./Topbar.css";
+import "../styles/Topbar.css";
 import { FaSearch } from "react-icons/fa";
 
 const Topbar = () => {

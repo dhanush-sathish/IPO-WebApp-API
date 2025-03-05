@@ -1,37 +1,38 @@
 import {React, useState} from "react";
-import logo from './assets/logo.jpg';
+import logo from '../assets/logo.jpg';
 import Recaptcha from 'react-google-recaptcha';
 import {FaEye} from 'react-icons/fa';
+import googlelogo from '../assets/google-logo.jpg';
 
 const SignUp = () => {
-    //const [passwordVisible, setpasswordVisible] = useState(false);
-    //const [captcha, setCaptcha] = useState(null);
-    //
-    //const showPassword = () => {
-    //    setpasswordVisible(prevState => ! prevState);
-    //} 
-    //
-    //const handleCaptcha = (token) => {
-    //    setCaptcha(token);
-    //}
+    const [passwordVisible, setpasswordVisible] = useState(false);
+    const [captcha, setCaptcha] = useState(null);
 
-    //const signUp = () => {
-    //    if(captcha === null) {
-    //        alert("Complete the captcha"); 
-    //    }
-    //    else {
-    //        let SignUpData = {
-    //            name: document.getElementById('username').value,
-    //            email: document.getElementById('email').value,
-    //            password: document.getElementById('password').value,
-    //        }
-    //
-    //        //send the data to the backend
-    //    }
-    //} 
+    const showPassword = () => {
+        setpasswordVisible((prevVisibilty) => !prevVisibilty);
+    } 
+
+    const handleCaptcha = (token) => {
+        setCaptcha(token);
+    }
+
+    const signUp = () => {
+        if(captcha === null) {
+            alert("Complete the captcha"); 
+        }
+        else {
+            let SignUpData = {
+                name: document.getElementById('username').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value,
+            }
+
+            //send the data to the backend
+        }
+    } 
 
     return (
-        <div className="d-flex align-items-center justify-content-center vh-100" style={{backgroundColor: "#f4f4f4"}}>
+        <div className="d-flex align-items-center justify-content-center vh-100">
             <div className="d-flex card px-0 py-3 border-0 shadow-none" style={{ backgroundColor: "inherit", width: "400px", height: "850px" }}>
                 <img src={logo} className="p-3 mx-auto d-block img-fluid w-75"></img>
                 <h2 className="text-center fw-bold" style={{ fontSize: "25px" }}>Create an account</h2>
@@ -60,7 +61,7 @@ const SignUp = () => {
                             <label className="fw-bold form-label">Password</label>
                         </div>
                         <div className="input-group input-group-lg border border-dark" style={{ borderRadius: "5px" }}>
-                            <input type="password" id="password" className="m-0 form-control border-0 h-100"></input>
+                            <input type={ passwordVisible? "text": "password" } id="password" className="m-0 form-control border-0 h-100"></input>
                             <button 
                                 className="m-0 h-100"
                                 style={{ 
@@ -69,7 +70,7 @@ const SignUp = () => {
                                     backgroundColor: "white",
                                     border: "None" 
                                 }}
-                                //onClick={showPassword}
+                                onClick={showPassword}
                             >
                                 <FaEye className="view-icon" title="View"  style={{ color: "grey"  }}/>
                             </button>
@@ -83,11 +84,11 @@ const SignUp = () => {
                     <Recaptcha
                         className="py-2"
                         sitekey={process.env.REACT_APP_KEY}
-                        //onChange={handleCaptcha}
+                        onChange={handleCaptcha}
                     />
                     
                     <div className="mb-3" style={{ height: "47px" }} id="Submit">
-                        <button className="border-0 w-100 text-white fw-bold"  style={{ borderRadius: "5px", height: "100%", backgroundColor: "#5d12d2"}}>
+                        <button className="border-0 w-100 text-white fw-bold" onClick={signUp} style={{ borderRadius: "5px", height: "100%", backgroundColor: "#5d12d2"}}>
                            Sign up 
                         </button>
                     </div>
@@ -99,8 +100,8 @@ const SignUp = () => {
                     <hr className="flex-grow-1 opacity-50 border-secondary" />
                 </div>
 
-                <div className="d-flex align-items-center justify-content-center bg-secondary" style={{ height: "50px", borderRadius: "5px" }}>
-                    <img></img>
+                <div className="d-flex align-items-center justify-content-center" style={{ backgroundColor: "#e4e7eb", height: "50px", borderRadius: "5px" }}>
+                    <img src={googlelogo} alt="Google" style={{ width: "30px", marginRight: "10px" }} />
                     <span>Continue with Google</span>
                 </div>
 

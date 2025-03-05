@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Navbar.css";
-import logo from "../../assets/logowithoutname.png";
+import "../styles/Navbar.css";
+import logo from "../assets/logowithoutname.png";
 import { useNavigate } from "react-router";
 
 const Navbar = () => {
@@ -23,11 +23,11 @@ const Navbar = () => {
 
         {/* Navigation Links - Only show on desktop or when isOpen is true */}
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
-          <li><a href="#">IPO</a></li>
-          <li><a href="#">COMMUNITY</a></li>
-          <li><a href="#">PRODUCTS</a></li>
-          <li><a href="#">BROKERS</a></li>
-          <li><a href="#">LIVE NEWS <span className="new-badge">NEW</span></a></li>
+          <li className="nav-list"><a href="#">IPO</a></li>
+          <li className="nav-list"><a href="#">COMMUNITY</a></li>
+          <li className="nav-list"><a href="#">PRODUCTS</a></li>
+          <li className="nav-list"><a href="#">BROKERS</a></li>
+          <li className="nav-list"><a href="#">LIVE NEWS <span className="new-badge">NEW</span></a></li>
           <li className="auth-buttons">
             <button className="sign-in" onClick = {() => navigate('/signin')} >Sign In</button>
             <button className="sign-up" onClick = {() => navigate('/signup')} >Sign Up Now</button>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Menu from "./components/Menubar/Menu";
-import Topbar from "./components/Menubar/Topbar";
+import Menu from "../components/Menu";
+import Topbar from "../components/Topbar";
 import { FaTrash, FaEye } from "react-icons/fa"; // Import icons
-import "./ManageIPO.css";
+import "../styles/ManageIPO.css";
 
 const ManageIPO = () => {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -1,6 +1,7 @@
 import {React, useState} from "react";
-import Menu from "./components/Menubar/Menu";
-import Topbar from "./components/Menubar/Topbar";
+import Dashboard from "../components/Dashboard";
+import Menu from "../components/Menu";
+import Topbar from "../components/Topbar";
 
 const AdminDashboard = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -11,6 +12,9 @@ const AdminDashboard = () => {
             </div>
             <div className="main-content">
                 <Topbar></Topbar>
+                <div className="w-100 main-dashboard">
+                    <Dashboard/>
+                </div>
             </div>
         </>
     );

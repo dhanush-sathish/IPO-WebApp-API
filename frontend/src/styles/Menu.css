@@ -56,10 +56,9 @@
   .menu-list {
     list-style: none;
     padding: 0;
-    margin: 0;
   }
 
-  .menu-list li {
+  .menu-list .menu-elem {
     display: flex;
     align-items: center;
     padding: 12px 15px;
@@ -70,7 +69,7 @@
     transition: background 0.2s, color 0.2s;
   }
 
-  .menu-list li:hover {
+  .menu-list .menu-elem:hover {
     background-color: #e4dff0;
     color: blue;
   }
@@ -95,27 +94,23 @@
   margin: 0;
 }
 
-.menu-list li {
+.menu-list .menu-elem {
   display: flex;
   align-items: center;
   padding: 12px 15px;
   cursor: pointer;
   color: grey;  /* Ensure text is visible */
   font-size: 16px;
-  
   transition: background 0.2s, color 0.2s;
 }
 
-.menu-list li:hover {
+.menu-list .menu-elem:hover {
   background-color: #e4dff0;
-  color: blue;
+  color: #735da4;
 }
 
-/* Icons */
-.menu-icon {
-  margin-right: 10px;
-  font-size: 18px;
-  color: #735da4;
+.menu-icon span {
+    margin-left: 10px;
 }
 
 /* Header */
