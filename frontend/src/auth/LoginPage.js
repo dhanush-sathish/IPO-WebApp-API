@@ -1,7 +1,7 @@
 import { Component, createRef } from "react";
-import logo from './assets/logo.jpg';  // Ensure this image exists in your project
+import logo from '../assets/logo.jpg';  // Ensure this image exists in your project
 import Recaptcha from 'react-google-recaptcha';
-import googlelogo from './assets/google-logo.jpg';
+import googlelogo from '../assets/google-logo.jpg';
 import {FaEye} from 'react-icons/fa';
 
 class LoginPage extends Component {

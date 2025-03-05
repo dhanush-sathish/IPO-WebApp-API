@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import "./ForgotPassword.css";
-import logo from "../../assets/logo.jpg";
+import "../styles/ForgotPassword.css";
+import logo from "../assets/logo.jpg";
 
 const ResetPassword = () => {
   const [email, setEmail] = useState("");

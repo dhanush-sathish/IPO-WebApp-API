@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router';
-import SignUp from './SignUp';
-import LoginPage from './LoginPage';
-import ForgotPassword from './ForgotPassword';
-import AdminDashboard from './AdminDashboard';
-import ManageIPO from './ManageIPO';
+import SignUp from './auth/SignUp';
+import LoginPage from './auth/LoginPage';
+import ForgotPassword from './auth/ForgotPassword';
+import AdminDashboard from './admin/AdminDashboard';
+import InvestorsApp from './investor/Investors';
+import ManageIPO from './admin/ManageIPO';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +20,7 @@ root.render(
             <Route path="/reset-password" element = {<ForgotPassword/>} />
             <Route path="/admin/dashboard" element = {<AdminDashboard/>} />
             <Route path="/admin/manage" element = {<ManageIPO/>} />
+            <Route path="/investors" element = {<InvestorsApp/>} />
         </Routes>
     </BrowserRouter>
 );
