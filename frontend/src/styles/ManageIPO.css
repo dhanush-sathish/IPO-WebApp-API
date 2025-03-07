@@ -3,7 +3,7 @@
   flex-direction: row;
   margin: 0px !important;
   padding: 0 !important;
-  width: 100% !important;
+  width: 1916px; 
   height: 100vh;
 }
 
@@ -20,7 +20,9 @@
 
 /* Content Area */
 .main-content {
-  flex-grow: 1; /* Allows the content area (table) to take the remaining space */
+  display: flex;
+  flex-direction: column; /* Allows the content area (table) to take the remaining space */
+  height: 100%;
   padding: 20px;
   margin-left: 250px;
   overflow-y: auto;

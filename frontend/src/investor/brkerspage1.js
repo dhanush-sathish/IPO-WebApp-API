@@ -54,7 +54,7 @@ const BrokerCard = ({ broker }) => (
   </div>
 );
 
-const App = () => {
+const BrokersPage = () => {
   return (
     <div className="bg-cover bg-center min-h-screen" style={{ backgroundImage: "url('background-image-url')" }}>
       <div className="container mx-auto p-4 max-w-screen-lg">
@@ -91,4 +91,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default BrokersPage;
