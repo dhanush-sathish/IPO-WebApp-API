@@ -9,6 +9,9 @@ import ForgotPassword from './auth/ForgotPassword';
 import AdminDashboard from './admin/AdminDashboard';
 import InvestorsApp from './investor/Investors';
 import ManageIPO from './admin/ManageIPO';
+import BluestockComparision from './investor/Compare Brokers Page.js';
+import BrokersPage from './investor/brkerspage1';
+import './styles/index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +24,8 @@ root.render(
             <Route path="/admin/dashboard" element = {<AdminDashboard/>} />
             <Route path="/admin/manage" element = {<ManageIPO/>} />
             <Route path="/investors" element = {<InvestorsApp/>} />
+            <Route path="/compare-broker" element = {<BluestockComparision/>} />
+            <Route path="/brokers" element = {<BrokersPage/>} />
         </Routes>
     </BrowserRouter>
 );
