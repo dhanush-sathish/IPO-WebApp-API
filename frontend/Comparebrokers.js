@@ -67,6 +67,23 @@ const BluestockDashboard = () => {
       }]
     });
 
+    // Broker Comparison Chart
+    createChart('brokerComparisonChart', 'bar', {
+      labels: ['Account Charges', 'Brokerage Fees', 'Customer Rating', 'Complaints'],
+      datasets: [
+        {
+          label: 'Bluestock',
+          data: [3500, 6000, 4.7, 5],
+          backgroundColor: '#1E90FF'
+        },
+        {
+          label: 'Competitor X',
+          data: [4000, 7000, 4.3, 8],
+          backgroundColor: '#FF6347'
+        }
+      ]
+    });
+
     return () => charts.forEach(chart => chart.destroy());
   }, []);
 
@@ -140,6 +157,11 @@ const BluestockDashboard = () => {
           </tbody>
         </table>
         <canvas id="financialsChart"></canvas>
+      </div>
+
+      <div className="card orange-border">
+        <h2>Broker Comparison</h2>
+        <canvas id="brokerComparisonChart"></canvas>
       </div>
     </div>
   );
