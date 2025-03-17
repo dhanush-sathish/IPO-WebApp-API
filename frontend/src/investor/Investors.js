@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import InvestorCard from "../components/InvestorCard";
 import Navbar from "../components/Navbar";
+import "../styles/Investors.css";
 
 const investors = [
     {
@@ -83,6 +84,8 @@ function InvestorApp() {
       <br />
       <br />
       <br />
+      <br />
+      <br />
       <div className="container">
         <section className="investor-section">
           <div className="investor-header">
@@ -97,7 +100,7 @@ function InvestorApp() {
               />
             </div>
           </div>
-          <p>
+          <p className="subhead">
             Look into the portfolio of these Super Investors to find out their
             favorite stocks.
           </p>

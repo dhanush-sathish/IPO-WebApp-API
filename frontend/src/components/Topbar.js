@@ -2,13 +2,19 @@ import React from "react";
 import "../styles/Topbar.css";
 import { FaSearch } from "react-icons/fa";
 
-const Topbar = () => {
+const Topbar = ({ onSearch }) => {
   return (
     <header className="header">
-        <div className="search-container">
-            <input type="text" placeholder="Search" className="search-bar" />
-            <span ><FaSearch className="search-icon"/></span> 
-        </div>
+      <div className="search-container">
+      <label className="search-label">Search by Company Name & IPO Status</label>
+        <input
+          type="text"
+          placeholder="Search here..."
+          className="search-bar"
+          onChange={(e) => onSearch(e.target.value)} // Call search function on input change
+        />
+        <span><FaSearch className="search-icon" /></span>
+      </div>
     </header>
   );
 };

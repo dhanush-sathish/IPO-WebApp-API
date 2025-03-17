@@ -75,12 +75,9 @@ margin:30px;
   font-weight: bold;
 }
 
-.status.ongoing {
-   color: #36a336;
-  
- }
+.status.ongoing { color: #36a336;}
 .status.coming { color: orange; }
-.status.new-listed { color:red;}
+.status.closed { color:red;}
 
 /* Icons */
 .icons {
@@ -145,3 +142,93 @@ margin:30px;
 
 
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 40%;
+  max-width: 500px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.modal-content {
+  width: 50%;
+  max-height: 80vh;
+  overflow: hidden; /* Prevent entire modal from scrolling */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.modal-content div {
+  max-height: 70vh;
+  overflow-y: auto; /* Enable scrolling inside modal */
+  padding-right: 10px; /* Prevent scrollbar overlap */
+}
+
+
+.modal-title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.search-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.status-dropdown {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
