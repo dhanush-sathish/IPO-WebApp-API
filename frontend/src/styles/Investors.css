@@ -14,9 +14,18 @@
   
   /* Investors Grid */
   .investors {
+    width:95vw;
+    margin:auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap:20px;
+  }
+
+  .investor-card {
+    width: 250px; /* Default width for desktop */
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
   }
   
   /* Investor Header (Search Bar + Title) */
@@ -30,8 +39,13 @@
   }
   
   .sharks {
+    margin-left:25px;
     font-size: 34px;
     font-weight: bold;
+  }
+
+  .subhead{
+    margin-left:25px;
   }
   
   /* Search Bar */
@@ -51,10 +65,31 @@
   
   /* Responsive Design */
   @media screen and (max-width: 768px) {
-    .investor-header {
-      flex-direction: column-reverse;
-      align-items:center;
-      text-align: center;
+    .investors {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Center align the cards */
+      gap: 20px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+    
+  
+    .investor-card {
+      width: 100vw !important; /* Force full width */
+      max-width: 100%;
+      margin: 0 !important; /* Remove unwanted margins */
+      padding: 10px; /* Prevent text from touching edges */
+      box-sizing: border-box; /* Ensure padding doesn’t cause overflow */
+    }
+  
+    /* Remove Any Extra Padding from the Parent Containers */
+    .container, .investor-section {
+      width: 100vw !important;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
     }
   
     .sharks {

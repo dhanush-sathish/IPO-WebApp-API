@@ -122,34 +122,53 @@
   
   /* Responsive Design */
   @media screen and (max-width: 768px) {
-    .menu-icon {
-      display: block;
-    }
-  
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background: white;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 10px 0;
-      text-align: center;
-    }
-  
-    .nav-links.active {
+    .navbar-container {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 20px;
+      position: relative;
     }
   
-    .nav-links .nav-list {
-      padding: 10px 0;
+    .logo {
+      margin-right: auto; /* Ensures logo stays on the left */
+      display: flex;
+      align-items: center;
     }
   
-    .auth-buttons {
-      flex-direction: column;
-      gap: 10px;
+    .menu-icon {
+      display: block !important; /* Ensures menu icon is visible */
+      order: 1; /* Moves menu icon to the right */
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 1001; /* Ensures visibility above other elements */
     }
+  
+  
+   
+    /* Initially Hide Navigation Menu */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  /* Show Menu when Active */
+  .nav-links.active {
+    max-height: 300px; /* Adjust based on content */
+    opacity: 1;
+  }
   }
   
